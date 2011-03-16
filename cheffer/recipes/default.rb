@@ -1,4 +1,4 @@
-gem_packge "right_aws"
+gem_package "right_aws"
 require "right_aws"
 Chef::Log.info "XXX: AWS: #{defined(RightAws).inspect}"
 
