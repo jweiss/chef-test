@@ -3,5 +3,9 @@ require "right_aws"
 Chef::Log.info "XXX: AWS: #{defined?(RightAws).inspect}"
 
 gem_package "rocking_chair"
-require "rocking_chair"
-Chef::Log.info "XXX: RockingChair: #{defined?(RockingChair).inspect}"
+ruby_block 'test rocking chair' do
+  block do
+    require "rocking_chair"
+    Chef::Log.info "XXX: RockingChair: #{defined?(RockingChair).inspect}"
+  end
+end
