@@ -2,6 +2,7 @@ gem_package "right_aws"
 require "right_aws"
 Chef::Log.info "XXX: AWS: #{defined?(RightAws).inspect}"
 
+gem_package "activesupport", '3.0.5'
 gem_package "rocking_chair"
 ruby_block 'test rocking chair' do
   block do
